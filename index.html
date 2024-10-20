@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sections: Home, About, Projects, Contact -->
+    <section id="home">
+        <h1 style="color:black" >Welcome to My Portfolio Website</h1>
+        <h1 style="color:black">Hello....! Iam Sneha B T</h1>
+       
+        <img src="profile-photo.jpg" alt="Your Name" class="profile-photo">
+        <p >              email:snehabtsneha@gmail.com</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a Master's student in Computer Applications with a strong foundation in software development, 
+            programming, and problem-solving. Throughout my journey, I have gained hands-on experience in 
+            developing web and mobile applications, working with databases, and exploring emerging technologies.</p>
+
+            <p>I have 2 years of work experience in Tata Consultancy Services as a software developer specializing in spring boot.  My expertise includes working with RESTful APIs, integrating with databases, and utilizing various Java technologies 
+                to enhance application performance. I am passionate about writing clean, maintainable code and continuously seek 
+                to improve my skills and stay updated with the latest industry trends and technologies.
+            </p> Feel free to explore my projects below and <a href="#contact">get in touch</a> if you'd like to connect or collaborate!</p>
+    </section>
+    <section id="skills">
+        <h2 style="text-align: center">My Skills</h2>
+        <div class="tab-container">
+            <div class="tabs">
+                <button class="tab-button active" onclick="openTab(event, 'Programming')">Programming Languages</button>
+                <button class="tab-button" onclick="openTab(event, 'Frameworks')">Frameworks</button>
+                <button class="tab-button" onclick="openTab(event, 'Tools')">Tools & Technologies</button>
+            </div>
+    
+            <div id="Programming" class="tab-content active">
+                <h3>Programming Languages</h3>
+                <ul>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                    <li>C</li>
+                </ul>
+            </div>
+    
+            <div id="Frameworks" class="tab-content">
+                <h3>Frameworks</h3>
+                <ul>
+                    <li>Spring Boot</li>
+                    <li>React</li>
+                    <li>Flask</li>
+                    <li>Angular</li>
+                </ul>
+            </div>
+    
+            <div id="Tools" class="tab-content">
+                <h3>Tools & Technologies</h3>
+                <ul>
+                    <li>Git & GitHub</li>
+                    <li>Docker</li>
+                    <li>Postman</li>
+                    <li>MySQL</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="interests" >
+        <h2 style="text-align: center">My Interests</h2>
+        <p style="text-align: center">     Beyond coding and technology, I have a variety of interests that inspire my creativity and enhance my problem-solving skills. Here are a few:</p>
+        <ul style="text-align: center">
+           <li><strong>Traveling:</strong> Exploring new cultures and places helps me gain diverse perspectives, which I find invaluable when approaching problem-solving in tech.</li>
+           <li><strong>Dancing:</strong> Dancing is a passion of mine that allows me to express myself creatively.  dancing helps me unwind and stay physically active.</li>
+       
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2 style="text-align: center">Projects</h2>
+        <div class="project">
+            <h3>Smart parking Mobile Application</h3>
+            <p> The Smart Parking mobile application is designed to enhance the parking experience for users in urban areas where parking is often a challenge. By leveraging real-time data and location-based services, the app enables users to quickly find available parking spots, make reservations, and process payments seamlessly—all from their mobile devices.
+            </p>
+            <a href="https://github.com/Snehagit-git">View Demo</a>
+        </div>
+        <div class="project2">
+            <h3>Breast Cancer Detection Using Machine Learning</h3>
+            <p>  Utilizing a dataset of mammogram images and clinical data, I employed various machine learning algorithms, including Support Vector Machines (SVM), Random Forest, and Convolutional Neural Networks (CNN), to develop a predictive model. The model is designed to classify breast tissue as benign or malignant, providing healthcare professionals with valuable insights to aid in diagnosis.
+            </p>
+            <a href="https://github.com/Snehagit-git">View Demo</a>
+        </div>
+        <div class="project3">
+            <h3>Pseudo Spider Project</h3>
+            <p> The Pseudo Spider project is designed to simulate the functionality of a web crawler, commonly known as a spider, which is utilized by search engines to index and analyze web content. This project aims to provide insights into how web crawlers work while also allowing users to understand the intricacies of web data extraction and processing.
+            </p>
+            <a href="https://github.com/Snehagit-git">View Demo</a>
+        </div>
+
+    </section>
+
+    <section id="contact">
+        <h2 style="text-align: center">Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="thank-you-message" style="display:none;">Thank you for your message!</div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        function openTab(evt, tabName) {
+            // Hide all tab contents
+            var i, tabcontent, tabbuttons;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+    
+            // Remove active class from all buttons
+            tabbuttons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("active");
+            }
+    
+            // Show the current tab and set the button as active
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+    
+</body>
+</html>
